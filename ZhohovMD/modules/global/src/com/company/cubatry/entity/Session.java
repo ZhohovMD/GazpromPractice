@@ -32,15 +32,11 @@ public class Session extends StandardEntity {
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "SPEAKER_ID")
-    Speaker speaker;
+    private Speaker speaker;
 
     @Lob
     @Column(name = "DESCRIPTION")
     private String description;
-
-    @Column(name = "END_DATE")
-    @Transient
-    private LocalDateTime endDate;
 
     @Transient
     @MetaProperty(related = {"startDate", "duration"})

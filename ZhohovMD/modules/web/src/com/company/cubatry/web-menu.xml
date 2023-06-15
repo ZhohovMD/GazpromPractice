@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
     <menu id="application-cubatry" insertBefore="administration" caption="mainMsg://menu_config.application-cubatry">
+        <item screen="cubatry_Session.browse" caption="mainMsg://menu_config.cubatry_Session.browse"/>
+        <item screen="cubatry_Speaker.browse" caption="mainMsg://menu_config.cubatry_Speaker.browse"/>
     </menu>
 </menu-config>
