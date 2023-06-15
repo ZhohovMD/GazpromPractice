@@ -1,6 +1,7 @@
 package com.company.cubatry.entity;
 
 import com.esotericsoftware.kryo.NotNull;
+import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 import org.springframework.stereotype.Indexed;
 
@@ -10,8 +11,9 @@ import javax.persistence.Index;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 
-@Table(name = "CUBATRY_SPEAKER", indexes = @Index(name = "LAST_NAME_INDEX", columnList = "lastName"))
+@Table(name = "CUBATRY_SPEAKER", indexes = @Index(name = "LAST_NAME_INDEX", columnList = "LAST_NAME"))
 @Entity(name = "cubatry_Speaker")
+@NamePattern("%s %s|firstName,lastName")
 public class Speaker extends StandardEntity {
     private static final long serialVersionUID = -8343267107211113328L;
 
