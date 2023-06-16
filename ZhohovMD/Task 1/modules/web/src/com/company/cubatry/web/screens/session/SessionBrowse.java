@@ -30,6 +30,7 @@ public class SessionBrowse extends StandardLookup<Session> {
         sessionEditDialog.show();
     }
 
+    @Subscribe("sessionsCalendar")
     private void onSessionCalendarCalendarEventMove(Calendar.CalendarEventMoveEvent<LocalDateTime> event) {
         Session session = sessionService.resheduleSession((Session) event.getEntity(), event.getNewStart());
         sessionsDc.replaceItem(session);

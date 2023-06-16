@@ -18,7 +18,7 @@ public class SessionServiceBean implements SessionService {
     public Session resheduleSession(Session session, LocalDateTime newStartDate) {
         LocalDateTime dayStart = newStartDate.truncatedTo(ChronoUnit.DAYS).withHour(8);
         LocalDateTime dayEnd = newStartDate.truncatedTo(ChronoUnit.DAYS).withHour(19);
-        Long sessionSameTime = dataManager.loadValue("select count(s) from planner_Session s where " +
+        Long sessionSameTime = dataManager.loadValue("select count(s) from cubatry_Session s where " +
                         "(s.startDate between :dayStart and :dayEnd) " +
                         "and s.speaker = :speaker " +
                         "and s.id <> :sessionId", Long.class)

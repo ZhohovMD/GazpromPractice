@@ -5,7 +5,7 @@ import com.company.cubatry.entity.Session;
 
 @UiController("cubatry_Session.edit")
 @UiDescriptor("session-edit.xml")
-@EditedEntityContainer("sessionDc")
+@EditedEntityContainer("sessionsDc")
 @LoadDataBeforeShow
 public class SessionEdit extends StandardEditor<Session> {
 
