@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="90e91206-4508-40fc-a601-fe6fce7351a3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/db/init/hsql/10.create-db.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/db/init/hsql/20.create-db.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/db/init/hsql/30.create-db.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/db/update/hsql/23/06/230615-1-createSession.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/db/update/hsql/23/06/230615-1-createSpeaker.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/db/update/hsql/23/06/230615-2-createSession.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/db/update/hsql/23/06/230615-2-createSpeaker.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/db/update/hsql/23/06/230615-2-updateSession.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/db/update/hsql/23/06/230615-2-updateSession_DropScript.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/db/update/hsql/23/06/230615-2-updateSpeaker01.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/src/com/company/cubatry/app.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/src/com/company/cubatry/core/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/src/com/company/cubatry/service/SessionServiceBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/src/com/company/cubatry/spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/test/com/company/cubatry/CubatryTestContainer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/test/com/company/cubatry/core/SampleIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/test/com/company/cubatry/test-app.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/test/com/company/cubatry/test-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/web/META-INF/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/core/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/global/src/com/company/cubatry/entity/Session.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/global/src/com/company/cubatry/entity/Speaker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/global/src/com/company/cubatry/entity/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/global/src/com/company/cubatry/metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/global/src/com/company/cubatry/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/global/src/com/company/cubatry/service/SessionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/global/src/com/company/cubatry/views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/company/cubatry/web-app.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/company/cubatry/web-dispatcher-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/company/cubatry/web-menu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/company/cubatry/web-permissions.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/company/cubatry/web-screens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/company/cubatry/web-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/company/cubatry/web/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/company/cubatry/web/screens/session/SessionBrowse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/company/cubatry/web/screens/session/SessionEdit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/company/cubatry/web/screens/session/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/company/cubatry/web/screens/session/session-browse.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/company/cubatry/web/screens/session/session-edit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/company/cubatry/web/screens/speaker/SpeakerBrowse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/company/cubatry/web/screens/speaker/SpeakerEdit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/company/cubatry/web/screens/speaker/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/company/cubatry/web/screens/speaker/speaker-browse.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/src/com/company/cubatry/web/screens/speaker/speaker-edit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/test/com/company/cubatry/CubatryWebTestContainer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/web/META-INF/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/web/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/studio-intellij.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2RHUDOXotqQYxVZB2LX4tA0Ecno" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Task 1" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="90e91206-4508-40fc-a601-fe6fce7351a3" name="Changes" comment="" />
+      <created>1686906385705</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686906385705</updated>
+    </task>
+    <servers />
+  </component>
+</project>
