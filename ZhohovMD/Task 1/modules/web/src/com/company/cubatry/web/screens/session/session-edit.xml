@@ -4,7 +4,7 @@
         focusComponent="form"
         messagesPack="com.company.cubatry.web.screens.session">
     <data>
-        <instance id="sessionDc"
+        <instance id="sessionsDc"
                   class="com.company.cubatry.entity.Session">
             <view extends="_local">
                 <property name="speaker" view="_minimal"/>
@@ -13,11 +13,11 @@
             <loader/>
         </instance>
     </data>
-    <dialogMode height="600"
-                width="800"/>
+    <dialogMode height="auto"
+                width="auto"/>
     <layout expand="editActions" spacing="true">
-        <form id="form" dataContainer="sessionDc">
-            <column width="350px">
+        <form id="form" dataContainer="sessionsDc">
+            <column width="250px">
                 <textField id="topicField" property="topic"/>
                 <dateField id="startDateField" property="startDate"/>
                 <textField id="durationField" property="duration"/>
