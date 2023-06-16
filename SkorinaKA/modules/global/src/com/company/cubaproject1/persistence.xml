@@ -2,5 +2,7 @@
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
     <persistence-unit name="cubaproject1" transaction-type="RESOURCE_LOCAL">
 
+        <class>com.company.cubaproject1.entity.Speaker</class>
+        <class>com.company.cubaproject1.entity.Session</class>
     </persistence-unit>
 </persistence>
