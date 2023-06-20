@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
+    <menu id="application-cubapsql" insertBefore="administration" caption="mainMsg://menu_config.application-cubapsql">
+        <item screen="users.browse" caption="mainMsg://menu_config.users.browse"/>
+        <item screen="phone_number.browse" caption="mainMsg://menu_config.phone_number.browse"/>
+        <item screen="phone_owners.browse" caption="mainMsg://menu_config.phone_owners.browse"/>
+    </menu>
+</menu-config>
