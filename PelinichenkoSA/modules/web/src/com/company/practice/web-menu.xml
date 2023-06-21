@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
-    <menu id="application-practice" insertBefore="administration" caption="mainMsg://menu_config.application-practice">
-        <item screen="practice_Session.browse" caption="mainMsg://menu_config.practice_Session.browse"/>
-    </menu>
-</menu-config>

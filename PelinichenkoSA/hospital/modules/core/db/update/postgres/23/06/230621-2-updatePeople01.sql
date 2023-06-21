@@ -1,0 +1,2 @@
+alter table HOSPITAL_PEOPLE add constraint FK_HOSPITAL_PEOPLE_ON_WARDS foreign key (WARDS_ID) references HOSPITAL_WARDS(ID);
+create index IDX_HOSPITAL_PEOPLE_ON_WARDS on HOSPITAL_PEOPLE (WARDS_ID);
