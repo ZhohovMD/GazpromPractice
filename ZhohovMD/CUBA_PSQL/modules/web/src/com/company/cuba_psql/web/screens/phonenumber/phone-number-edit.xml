@@ -15,14 +15,22 @@
     <layout expand="editActions" spacing="true">
         <form id="form" dataContainer="phoneNumberDc">
             <column width="350px">
-                <textField id="phNumberField" property="phNumber"/>
-                <textField id="tariffNameField" property="tariffName"/>
-                <textField id="balanceField" property="balance"/>
+                <maskedField id="phNumberField"
+                             caption="Телефонный номер"
+                             mask="+7 (###) ###-##-##"
+                             valueMode="masked"
+                             property="phNumber"/>
+                <textField id="tariffNameField"
+                           caption="Название тарифа"
+                           property="tariffName"/>
+                <textField id="balanceField"
+                           caption="Баланс"
+                           property="balance"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">
-            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
-            <button id="closeBtn" action="windowClose"/>
+            <button id="commitAndCloseBtn" action="windowCommitAndClose" caption="Сохранить"/>
+            <button id="closeBtn" action="windowClose" caption="Закрыть"/>
         </hbox>
     </layout>
 </window>

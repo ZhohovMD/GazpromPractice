@@ -1,4 +1,4 @@
-create table phone_number (
+create table CUBAPSQL_USERS (
     ID uuid,
     VERSION integer not null,
     CREATE_TS timestamp,
@@ -8,9 +8,9 @@ create table phone_number (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     --
-    ph_number varchar(255) not null,
-    tariff_name varchar(255) not null,
-    balance double precision not null,
+    FIRST_NAME varchar(255) not null,
+    LAST_NAME varchar(255) not null,
+    DATE_OF_BIRTH date not null,
     --
     primary key (ID)
 );

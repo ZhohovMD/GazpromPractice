@@ -8,12 +8,12 @@
         <collection id="phoneOwnersesDc"
                     class="com.company.cuba_psql.entity.PhoneOwners">
             <view extends="_local">
-                <property name="userId" view="_minimal"/>
+                <property name="users" view="_minimal"/>
                 <property name="phoneNumber" view="_minimal"/>
             </view>
             <loader id="phoneOwnersesDl">
                 <query>
-                    <![CDATA[select e from phone_owners e]]>
+                    <![CDATA[select e from cubapsql_Phone_owners e]]>
                 </query>
             </loader>
         </collection>
@@ -24,20 +24,21 @@
             spacing="true">
         <filter id="filter"
                 applyTo="phoneOwnersesTable"
-                dataLoader="phoneOwnersesDl">
+                dataLoader="phoneOwnersesDl"
+                caption="фильтр">
             <properties include=".*"/>
         </filter>
         <groupTable id="phoneOwnersesTable"
                     width="100%"
                     dataContainer="phoneOwnersesDc">
             <actions>
-                <action id="create" type="create"/>
-                <action id="edit" type="edit"/>
-                <action id="remove" type="remove"/>
+                <action id="create" type="create" caption="создать"/>
+                <action id="edit" type="edit" caption="изменить"/>
+                <action id="remove" type="remove" caption="удалить"/>
             </actions>
             <columns>
-                <column id="userId"/>
-                <column id="phoneNumber"/>
+                <column id="users" caption="Абонент"/>
+                <column id="phoneNumber" caption="Телефонный номер"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

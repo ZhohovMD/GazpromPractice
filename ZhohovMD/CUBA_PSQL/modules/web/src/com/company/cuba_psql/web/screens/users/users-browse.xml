@@ -10,7 +10,7 @@
             <view extends="_local"/>
             <loader id="usersesDl">
                 <query>
-                    <![CDATA[select e from users e]]>
+                    <![CDATA[select e from cubapsql_Users e]]>
                 </query>
             </loader>
         </collection>
@@ -21,26 +21,27 @@
             spacing="true">
         <filter id="filter"
                 applyTo="usersesTable"
-                dataLoader="usersesDl">
+                dataLoader="usersesDl"
+                caption="фильтр">
             <properties include=".*"/>
         </filter>
         <groupTable id="usersesTable"
                     width="100%"
                     dataContainer="usersesDc">
             <actions>
-                <action id="create" type="create"/>
-                <action id="edit" type="edit"/>
-                <action id="remove" type="remove"/>
+                <action id="create" type="create" caption="создать"/>
+                <action id="edit" type="edit" caption="изменить"/>
+                <action id="remove" type="remove" caption="удалить"/>
             </actions>
             <columns>
-                <column id="firstName"/>
-                <column id="lastName"/>
-                <column id="dateOfBirth"/>
+                <column id="firstName" caption="Имя"/>
+                <column id="lastName" caption="Фамилия"/>
+                <column id="dateOfBirth" caption="Дата рождения"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
-                <button id="createBtn" action="usersesTable.create"/>
+                <button id="createBtn" action="usersesTable.create" />
                 <button id="editBtn" action="usersesTable.edit"/>
                 <button id="removeBtn" action="usersesTable.remove"/>
             </buttonsPanel>

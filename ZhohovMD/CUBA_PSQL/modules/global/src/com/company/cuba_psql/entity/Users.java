@@ -7,25 +7,25 @@ import com.haulmont.cuba.core.entity.StandardEntity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
-@Table(name = "users")
-@Entity(name = "users")
+@Table(name = "CUBAPSQL_USERS")
+@Entity(name = "cubapsql_Users")
 @NamePattern("%s %s|lastName,firstName")
 public class Users extends StandardEntity {
     private static final long serialVersionUID = -728422344138023698L;
 
     @NotNull
-    @Column(name = "first_name", nullable = false)
+    @Column(name = "FIRST_NAME", nullable = false)
     private String firstName;
 
     @NotNull
-    @Column(name = "last_name", nullable = false)
+    @Column(name = "LAST_NAME", nullable = false)
     private String lastName;
 
     @NotNull
-    @Column(name = "date_of_birth", nullable = false)
-    private LocalDateTime dateOfBirth;
+    @Column(name = "DATE_OF_BIRTH", nullable = false)
+    private LocalDate dateOfBirth;
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -43,11 +43,11 @@ public class Users extends StandardEntity {
         return lastName;
     }
 
-    public void setDateOfBirth(LocalDateTime dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public LocalDateTime getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 }
