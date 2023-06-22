@@ -1,10 +1,11 @@
 package com.company.cuba_psql.web.screens.phoneowners;
 
+import com.company.cuba_psql.entity.PhoneNumber;
 import com.company.cuba_psql.entity.Users;
 import com.company.cuba_psql.service.PhoneOwnersService;
-import com.haulmont.cuba.gui.Notifications;
 import com.haulmont.cuba.gui.components.Button;
 import com.haulmont.cuba.gui.components.HasValue;
+import com.haulmont.cuba.gui.components.Label;
 import com.haulmont.cuba.gui.components.PickerField;
 import com.haulmont.cuba.gui.screen.*;
 import com.company.cuba_psql.entity.PhoneOwners;
@@ -23,8 +24,6 @@ public class PhoneOwnersEdit extends StandardEditor<PhoneOwners> {
     private PhoneOwnersService phoneOwnersService;
 
     @Inject
-    private Notifications notifications;
-    @Inject
     private Logger log;
 
     @Named("commitAndCloseBtn")
@@ -33,20 +32,40 @@ public class PhoneOwnersEdit extends StandardEditor<PhoneOwners> {
     @Named("userIdField")
     private PickerField userField;
 
+    @Named("phoneNumberField")
+    private PickerField phNumberField;
+
+    @Named("userIdFieldError")
+    private Label<String> userLable;
+
+    @Named("phoneNumberFieldError")
+    private Label<String> phNumberLable;
+
     @Subscribe("userIdField")
     public void onUserIdFieldValueChange(HasValue.ValueChangeEvent<Users> event) {
         if (!phoneOwnersService.phoneOwnersCountControl(event.getValue())) {
-            notifications.create()
-                    .withCaption("Ошибка!")
-                    .withDescription("Абонент одновременно может иметь только 5 номеров!")
-                    .withType(Notifications.NotificationType.ERROR)
-                    .show();
+            userLable.setVisible(true);
             saveButton.setEnabled(false);
             userField.setIcon("icons/cancel.png");
         }
         else {
+            userLable.setVisible(false);
             saveButton.setEnabled(true);
             userField.setIcon("icons/ok.png");
+        }
+    }
+
+    @Subscribe("phoneNumberField")
+    public void onPhoneNumberFieldValueChange(HasValue.ValueChangeEvent<PhoneNumber> event) {
+        if (!phoneOwnersService.phoneOwnersNumbersControl(event.getValue())) {
+            phNumberLable.setVisible(true);
+            saveButton.setEnabled(false);
+            phNumberField.setIcon("icons/cancel.png");
+        }
+        else {
+            phNumberLable.setVisible(false);
+            saveButton.setEnabled(true);
+            phNumberField.setIcon("icons/ok.png");
         }
     }
 
