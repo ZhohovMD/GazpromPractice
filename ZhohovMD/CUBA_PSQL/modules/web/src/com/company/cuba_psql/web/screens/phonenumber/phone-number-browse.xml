@@ -10,7 +10,7 @@
             <view extends="_local"/>
             <loader id="phoneNumbersDl">
                 <query>
-                    <![CDATA[select e from phone_number e]]>
+                    <![CDATA[select e from cubapsql_Phone_number e]]>
                 </query>
             </loader>
         </collection>
@@ -21,21 +21,22 @@
             spacing="true">
         <filter id="filter"
                 applyTo="phoneNumbersTable"
-                dataLoader="phoneNumbersDl">
+                dataLoader="phoneNumbersDl"
+                caption="фильтр">
             <properties include=".*"/>
         </filter>
         <groupTable id="phoneNumbersTable"
                     width="100%"
                     dataContainer="phoneNumbersDc">
             <actions>
-                <action id="create" type="create"/>
-                <action id="edit" type="edit"/>
-                <action id="remove" type="remove"/>
+                <action id="create" type="create" caption="создать"/>
+                <action id="edit" type="edit" caption="изменить"/>
+                <action id="remove" type="remove" caption="удалить"/>
             </actions>
             <columns>
-                <column id="phNumber"/>
-                <column id="tariffName"/>
-                <column id="balance"/>
+                <column id="phNumber" caption="Телефонный номер"/>
+                <column id="tariffName" caption="Тариф"/>
+                <column id="balance" caption="Баланс"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

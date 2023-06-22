@@ -1,5 +1,5 @@
--- begin USERS
-create table users (
+-- begin CUBAPSQL_USERS
+create table CUBAPSQL_USERS (
     ID uuid,
     VERSION integer not null,
     CREATE_TS timestamp,
@@ -9,15 +9,15 @@ create table users (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     --
-    first_name varchar(255) not null,
-    last_name varchar(255) not null,
-    date_of_birth timestamp not null,
+    FIRST_NAME varchar(255) not null,
+    LAST_NAME varchar(255) not null,
+    DATE_OF_BIRTH date not null,
     --
     primary key (ID)
 )^
--- end USERS
--- begin PHONE_OWNERS
-create table phone_owners (
+-- end CUBAPSQL_USERS
+-- begin CUBAPSQL_PHONE_OWNERS
+create table CUBAPSQL_PHONE_OWNERS (
     ID uuid,
     VERSION integer not null,
     CREATE_TS timestamp,
@@ -27,14 +27,14 @@ create table phone_owners (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     --
-    user_id uuid not null,
-    phone_number uuid not null,
+    USER_ID uuid not null,
+    PHONE_NUMBER uuid not null,
     --
     primary key (ID)
 )^
--- end PHONE_OWNERS
--- begin PHONE_NUMBER
-create table phone_number (
+-- end CUBAPSQL_PHONE_OWNERS
+-- begin CUBAPSQL_PHONE_NUMBER
+create table CUBAPSQL_PHONE_NUMBER (
     ID uuid,
     VERSION integer not null,
     CREATE_TS timestamp,
@@ -44,10 +44,10 @@ create table phone_number (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     --
-    ph_number varchar(255) not null,
-    tariff_name varchar(255) not null,
-    balance double precision not null,
+    PH_NUMBER varchar(255) not null,
+    TARIFF_NAME varchar(255) not null,
+    BALANCE double precision not null,
     --
     primary key (ID)
 )^
--- end PHONE_NUMBER
+-- end CUBAPSQL_PHONE_NUMBER

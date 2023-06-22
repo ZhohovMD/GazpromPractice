@@ -1,4 +1,4 @@
-create table users (
+create table CUBAPSQL_PHONE_OWNERS (
     ID uuid,
     VERSION integer not null,
     CREATE_TS timestamp,
@@ -8,9 +8,8 @@ create table users (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     --
-    first_name varchar(255) not null,
-    last_name varchar(255) not null,
-    date_of_birth timestamp not null,
+    USER_ID uuid not null,
+    PHONE_NUMBER uuid not null,
     --
     primary key (ID)
 );

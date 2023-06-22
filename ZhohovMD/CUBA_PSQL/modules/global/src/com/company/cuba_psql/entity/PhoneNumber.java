@@ -3,28 +3,30 @@ package com.company.cuba_psql.entity;
 import com.esotericsoftware.kryo.NotNull;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
+import org.checkerframework.common.aliasing.qual.Unique;
 import org.springframework.context.annotation.Primary;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Table(name = "phone_number")
-@Entity(name = "phone_number")
+@Table(name = "CUBAPSQL_PHONE_NUMBER")
+@Entity(name = "cubapsql_Phone_number")
 @NamePattern("%s|phNumber")
 public class PhoneNumber extends StandardEntity {
     private static final long serialVersionUID = 6917184171375396943L;
 
     @NotNull
-    @Column(name = "ph_number",nullable = false)
+    @Unique
+    @Column(name = "PH_NUMBER",nullable = false)
     private String phNumber;
 
     @NotNull
-    @Column(name = "tariff_name", nullable = false)
+    @Column(name = "TARIFF_NAME", nullable = false)
     private String tariffName;
 
     @NotNull
-    @Column(name = "balance", nullable = false)
+    @Column(name = "BALANCE", nullable = false)
     private Double balance;
 
     public void setPhNumber(String phNumber) {
