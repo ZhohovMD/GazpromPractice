@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://wardsBrowse.caption"
+        focusComponent="wardsesTable"
+        messagesPack="com.company.hospital.web.screens.wards">
+    <data readOnly="true">
+        <collection id="wardsesDc"
+                    class="com.company.hospital.entity.Wards">
+            <view extends="_local"/>
+            <loader id="wardsesDl">
+                <query>
+                    <![CDATA[select e from hospital_Wards e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="wardsesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="wardsesTable"
+                dataLoader="wardsesDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="wardsesTable"
+                    width="100%"
+                    dataContainer="wardsesDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="maxCount"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="wardsesTable.create"/>
+                <button id="editBtn" action="wardsesTable.edit"/>
+                <button id="removeBtn" action="wardsesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

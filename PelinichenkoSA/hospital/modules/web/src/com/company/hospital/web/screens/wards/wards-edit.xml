@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://wardsEdit.caption"
+        focusComponent="form"
+        messagesPack="com.company.hospital.web.screens.wards">
+    <data>
+        <instance id="wardsDc"
+                  class="com.company.hospital.entity.Wards">
+            <view extends="_local"/>
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="wardsDc">
+            <column width="350px">
+                <textField id="nameField" property="name"/>
+                <textField id="maxCountField" property="maxCount"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>
